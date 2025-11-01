@@ -1,6 +1,11 @@
+
 import React from 'react';
 
-const Hero: React.FC = () => {
+type HeroProps = {
+  onGetStartedClick: () => void;
+};
+
+const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
   const stats = [
     { value: '50+', label: 'Projects Completed' },
     { value: '1M+', label: 'Users Served' },
@@ -22,7 +27,9 @@ const Hero: React.FC = () => {
           <p className="text-lg text-gray-300 mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
-          <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-brand-red rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-brand-red-dark focus:outline-none focus:ring-4 focus:ring-red-300 animate-pulse-slow">
+          <button 
+            onClick={onGetStartedClick}
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-brand-red rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-brand-red-dark focus:outline-none focus:ring-4 focus:ring-red-300 animate-pulse-slow">
             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white opacity-10 group-hover:w-full group-hover:h-full"></span>
             <span className="relative">
                 Get Started
