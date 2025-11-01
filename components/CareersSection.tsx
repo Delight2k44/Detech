@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { QuoteIcon } from './icons';
 
@@ -8,6 +7,7 @@ const CareersSection: React.FC = () => {
             <div className="container mx-auto grid md:grid-cols-2">
                 {/* Image Section */}
                 <div className="relative min-h-[500px] md:min-h-0">
+                    {/* TODO: Add an image of a modern office environment */}
                     <img src="https://placehold.co/800x600/101828/FFFFFF?text=Modern+Office" alt="Modern Detech Office" className="absolute inset-0 w-full h-full object-cover"/>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div className="relative h-full flex flex-col justify-end p-12 text-white">
@@ -22,20 +22,28 @@ const CareersSection: React.FC = () => {
                 {/* Text Content Section */}
                 <div className="bg-brand-blue-dark text-white p-12 md:p-16 flex flex-col justify-center">
                     <p className="text-sm font-bold text-gray-400 tracking-widest uppercase">CAREERS AT DETECH</p>
-                    <h2 className="text-3xl font-bold my-4">Innovating Swiftly and Courageously in Every Project</h2>
-                    <p className="text-gray-300 mb-8">
-                        Vel ultrices venenatis velit dictumst quam mollis vulputate dolor primis bibendum. Sollicitudin viverra elementum ligula sapien velit sed phasellus fames potenti molestie. Hendrerit lobortis id mauris aenean lacus.
-                    </p>
+                    <h2 className="text-3xl font-bold my-4">Building Safer Communities Through Innovation</h2>
+                    <div className="text-gray-300 mb-8 space-y-4">
+                        <p>
+                            At DETECH, we’re not just creating technology — we’re creating impact. Our team is passionate about developing smart, affordable solutions that protect lives and empower communities. Every project is driven by purpose, creativity, and a bold spirit of innovation.
+                        </p>
+                        <p>
+                           If you’re ready to make a real difference and help shape the future of fire safety in Africa, then DETECH is where you belong. Together, we’re turning ideas into life-saving solutions.
+                        </p>
+                        <p>
+                            Join us — and let’s engineer a safer tomorrow.
+                        </p>
+                    </div>
                     <div className="relative bg-brand-blue-light p-6 rounded-lg">
                         <QuoteIcon className="absolute top-4 left-4 w-12 h-12 text-brand-blue-dark opacity-50" />
                         <p className="relative italic">
-                            A gravida ante efficitur pretium facilisi praesent ultrices ornare curabitur feugiat. Nulla tortor lobortis imperdiet laoreet praesent pharetra. Curabitur semper adipiscing iaculis conubia massa inceptos a non lobortis praesent dignissim.
+                            We believe innovation should have purpose  every design, line of code, and device we create is built to make communities safer, stronger, and more connected. At DETECH, progress isn’t just about technology  it’s about impact
                         </p>
                         <div className="flex items-center mt-4">
-                            <img src="https://i.pravatar.cc/40?u=marie" alt="Marie R. Winters" className="w-10 h-10 rounded-full mr-4" />
+                            {/* TODO: Add image of the person giving the testimonial */}
+                            <img src="https://i.pravatar.cc/40?u=delight" alt="Delight Chetter" className="w-10 h-10 rounded-full mr-4" />
                             <div>
-                                <p className="font-bold">Marie R. Winters</p>
-                                <p className="text-sm text-gray-400">Lead Architect</p>
+                                <p className="font-bold">Delight Chetter</p>
                             </div>
                         </div>
                     </div>

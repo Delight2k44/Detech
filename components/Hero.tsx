@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 type HeroProps = {
@@ -19,13 +18,13 @@ const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
         <div className="max-w-2xl">
           <div className="flex items-center space-x-4">
             <hr className="w-16 border-t-2 border-brand-orange" />
-            <p className="text-lg font-semibold tracking-wider">ESTABLISHED 2024</p>
+            <p className="text-lg font-semibold tracking-wider">ESTABLISHED 2025</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold my-6 leading-tight">
-            Building The Future With <span className="text-brand-orange">Precision</span> & <span className="text-brand-orange">Passion</span>
+            Protecting Communities Through <span className="text-brand-orange">Innovation</span> & <span className="text-brand-orange">Purpose</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            FireLink is redefining fire safety with smart, locally built IoT technology designed to detect fires early and save lives. Together, we’re building safer, more connected, and resilient communities.
           </p>
           <button 
             onClick={onGetStartedClick}
