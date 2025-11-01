@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ClockIcon, MailIcon, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon, PhoneIcon, ChevronDownIcon, ShieldCheckIcon, MenuIcon, XIcon } from './icons';
+import { ClockIcon, MailIcon, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon, ChevronDownIcon, ShieldCheckIcon, MenuIcon, XIcon, DownloadIcon } from './icons';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,15 +63,10 @@ const Header: React.FC = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-               <div className="flex items-center space-x-2">
-                <div className="bg-brand-red text-white rounded-full p-2">
-                    <PhoneIcon className="w-5 h-5"/>
-                </div>
-                <div>
-                    <p className="text-xs text-gray-500">Emergency Call 24/7</p>
-                    <p className="font-bold text-brand-blue-dark">+1-555-707-1234</p>
-                </div>
-               </div>
+               <button className="bg-brand-orange text-white font-bold py-2 px-4 rounded-lg flex items-center space-x-2 hover:bg-opacity-90 transition-colors">
+                  <DownloadIcon className="w-5 h-5" />
+                  <span>Get The App</span>
+              </button>
             </div>
             
             <div className="md:hidden flex items-center">
@@ -99,15 +94,10 @@ const Header: React.FC = () => {
               ))}
             </div>
              <div className="px-4 py-4 border-t border-gray-200">
-               <div className="flex items-center space-x-2">
-                <div className="bg-brand-red text-white rounded-full p-2">
-                    <PhoneIcon className="w-5 h-5"/>
-                </div>
-                <div>
-                    <p className="text-xs text-gray-500">Emergency Call 24/7</p>
-                    <p className="font-bold text-brand-blue-dark">+1-555-707-1234</p>
-                </div>
-               </div>
+                <button className="w-full bg-brand-orange text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-opacity-90 transition-colors">
+                    <DownloadIcon className="w-5 h-5" />
+                    <span>Get The App</span>
+                </button>
             </div>
           </div>
         )}

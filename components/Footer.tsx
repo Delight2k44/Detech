@@ -14,9 +14,10 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-2xl font-bold text-white">Detech</span>
             </div>
             <p className="text-sm mb-6">
-              Netus torquent habitant ligula fames bibendum tempor sit. Habitasse donec maecenas amet sit porttitor facilisi potenti justo montes.
+              At DETECH, we’re dedicated to creating smart, affordable fire safety solutions that protect lives and empower communities across Africa. Innovation, impact, and accessibility drive everything we do.
             </p>
-            <h4 className="font-bold text-white mb-3">Subscribe Newsletter</h4>
+            <h4 className="font-bold text-white mb-2">Subscribe to Our Newsletter</h4>
+            <p className="text-sm mb-3">Stay updated on our latest innovations, community projects, and partnership opportunities.</p>
             <form className="flex">
               <input type="email" placeholder="Enter your email" className="w-full px-4 py-2 text-gray-800 rounded-l-md focus:outline-none" />
               <button type="submit" className="bg-brand-orange text-white font-bold px-4 py-2 rounded-r-md hover:bg-opacity-90">
@@ -29,12 +30,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-4 text-lg">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Services</a></li>
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Our Projects</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">Our Solutions</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Research</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">Research & Development</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">Events</a></li>
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Strategic Plan</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">Future Plans</a></li>
             </ul>
           </div>
 
@@ -42,9 +43,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-4 text-lg">Support</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Coverage Area</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">Coverage Areas</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">How We Serve</a></li>
-              <li><a href="#" className="hover:text-brand-orange transition-colors">Community News</a></li>
+              <li><a href="#" className="hover:text-brand-orange transition-colors">Community Updates</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">Help Center</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">FAQ</a></li>
               <li><a href="#" className="hover:text-brand-orange transition-colors">Contact Us</a></li>
@@ -55,9 +56,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-4 text-lg">Contact Information</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start">789 Tech Ave, Smalltown, TX 23456</li>
-              <li className="flex items-start">info@detech.com</li>
-              <li className="flex items-start">(555) 987-6543</li>
+              <li className="flex items-start">DETECH HQ, Bloemfontein, South Africa</li>
+              <li className="flex items-start">📧 detechfirelink@outlook.com</li>
+              <li className="flex items-start">📞 +27 65 987 6543</li>
             </ul>
             <div className="flex space-x-4 mt-6">
                 <a href="#" className="w-8 h-8 flex items-center justify-center bg-brand-blue-light rounded-full hover:bg-brand-red transition-colors"><FacebookIcon className="w-4 h-4" /></a>
