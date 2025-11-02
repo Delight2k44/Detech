@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { ArrowRightIcon, PlayIcon, PauseIcon } from './icons';
 
 type HeroProps = {
   onGetStartedClick: () => void;
 };
 
 const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
-  const stats = [
-    { value: '50+', label: 'Projects Completed' },
-    { value: '1M+', label: 'Users Served' },
-    { value: '100+', label: 'Expert Engineers' },
-  ];
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      videoRef.current?.pause();
+    } else {
+      videoRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <div 
-      className="relative h-[80vh] min-h-[600px] text-white bg-cover bg-center"
-      style={{ backgroundImage: "url('https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}
+      className="relative h-[80vh] min-h-[600px] text-white overflow-hidden group"
     >
-      <div className="absolute inset-0 bg-brand-blue-dark/80"></div>
+      <video 
+        ref={videoRef}
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://videos.pexels.com/video-files/8043729/8043729-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/80 via-brand-blue-dark/70 to-brand-blue-dark/90"></div>
+      
       {/* Content */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-2xl">
@@ -25,35 +43,33 @@ const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
             <p className="text-lg font-semibold tracking-wider">ESTABLISHED 2025</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold my-6 leading-tight">
-            Protecting Communities Through <span className="text-brand-orange">Innovation</span> & <span className="text-brand-orange">Purpose</span>
+            Protecting Communities Through <span className="text-brand-orange transition-opacity hover:opacity-80">Innovation</span> & <span className="text-brand-orange transition-opacity hover:opacity-80">Purpose</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             FireLink is redefining fire safety with smart, locally built IoT technology designed to detect fires early and save lives. Together, we’re building safer, more connected, and resilient communities.
           </p>
           <button 
             onClick={onGetStartedClick}
-            className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-brand-red rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-brand-red-dark focus:outline-none focus:ring-4 focus:ring-red-300 animate-pulse-slow">
-            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white opacity-10 group-hover:w-full group-hover:h-full"></span>
-            <span className="relative">
-                Get Started
-            </span>
+            className="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-brand-red rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-brand-red-dark hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-300 animate-pulse-slow">
+            Get Started
+            <ArrowRightIcon className="w-6 h-6 ml-3 transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
           </button>
         </div>
       </div>
 
-      {/* Stats Bar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="relative">
-                <p className="text-5xl font-bold text-brand-red">{stat.value}</p>
-                <p className="text-lg text-gray-200 mt-1">{stat.label}</p>
-                 {index < stats.length - 1 && <div className="hidden md:block absolute top-1/2 right-0 h-16 w-px bg-gray-500 transform -translate-y-1/2"></div>}
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Play/Pause Button */}
+      <div className="absolute bottom-8 right-8">
+        <button
+          onClick={handlePlayPause}
+          className="bg-white/20 text-white rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out hover:bg-white/40 focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label={isPlaying ? 'Pause video' : 'Play video'}
+        >
+          {isPlaying ? (
+            <PauseIcon className="w-6 h-6" />
+          ) : (
+            <PlayIcon className="w-6 h-6" />
+          )}
+        </button>
       </div>
     </div>
   );

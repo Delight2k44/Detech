@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { CheckIcon } from './icons';
+import { CheckIcon, ShieldCheckIcon, StarIcon, ServerIcon } from './icons';
 
 const AboutSection: React.FC = () => {
   return (
@@ -43,6 +42,26 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Stats Section */}
+          <div className="mt-12 pt-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+            <div>
+              <ShieldCheckIcon className="w-10 h-10 mx-auto text-brand-orange mb-2" />
+              <p className="text-2xl font-bold text-brand-blue-dark">10,000+</p>
+              <p className="text-gray-600">Lives Protected</p>
+            </div>
+            <div>
+              <StarIcon className="w-10 h-10 mx-auto text-brand-orange mb-2" />
+              <p className="text-2xl font-bold text-brand-blue-dark">5-Star</p>
+              <p className="text-gray-600">Rated App</p>
+            </div>
+            <div>
+              <ServerIcon className="w-10 h-10 mx-auto text-brand-orange mb-2" />
+              <p className="text-2xl font-bold text-brand-blue-dark">99.9%</p>
+              <p className="text-gray-600">Uptime</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

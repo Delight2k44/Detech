@@ -1,8 +1,39 @@
-
-import React from 'react';
-import { ShieldCheckIcon, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon } from './icons';
+import React, { useState } from 'react';
+import { DetechLogo, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon } from './icons';
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const validateEmail = (email: string): boolean => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError('');
+    setIsSubmitted(false);
+
+    if (!email) {
+      setError('Email address is required.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    console.log('Form submitted with email:', email);
+    setIsSubmitted(true);
+    setEmail('');
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000); // Reset success message after 5 seconds
+  };
+
   return (
     <footer className="bg-brand-blue-dark text-gray-300">
       <div className="container mx-auto px-4 py-16">
@@ -10,7 +41,7 @@ const Footer: React.FC = () => {
           {/* Column 1: About & Newsletter */}
           <div>
             <div className="flex items-center mb-4">
-              <ShieldCheckIcon className="h-10 w-10 text-brand-red" />
+              <DetechLogo className="h-10 w-10 text-brand-red" />
               <span className="ml-2 text-2xl font-bold text-white">Detech</span>
             </div>
             <p className="text-sm mb-6">
@@ -18,12 +49,28 @@ const Footer: React.FC = () => {
             </p>
             <h4 className="font-bold text-white mb-2">Subscribe to Our Newsletter</h4>
             <p className="text-sm mb-3">Stay updated on our latest innovations, community projects, and partnership opportunities.</p>
-            <form className="flex">
-              <input type="email" placeholder="Enter your email" className="w-full px-4 py-2 text-gray-800 rounded-l-md focus:outline-none" />
-              <button type="submit" className="bg-brand-orange text-white font-bold px-4 py-2 rounded-r-md hover:bg-opacity-90">
-                Go
-              </button>
-            </form>
+            <div>
+              <form className="flex" onSubmit={handleSubmit} noValidate>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setError('');
+                    setIsSubmitted(false);
+                  }}
+                  className={`w-full px-4 py-2 text-gray-800 rounded-l-md focus:outline-none focus:ring-2 ${error ? 'ring-red-500 border-red-500' : 'focus:ring-brand-orange'}`}
+                  aria-invalid={!!error}
+                  aria-describedby="email-error"
+                />
+                <button type="submit" className="bg-brand-orange text-white font-bold px-4 py-2 rounded-r-md hover:bg-opacity-90 transition-colors">
+                  Go
+                </button>
+              </form>
+              {error && <p id="email-error" className="text-red-500 text-xs mt-1">{error}</p>}
+              {isSubmitted && <p className="text-green-400 text-xs mt-1">Thank you for subscribing!</p>}
+            </div>
           </div>
 
           {/* Column 2: Quick Links */}

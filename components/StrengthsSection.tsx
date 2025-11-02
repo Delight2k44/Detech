@@ -1,21 +1,21 @@
 
 import React from 'react';
-import { ServerIcon, ShieldCheckIcon, ClockIcon } from './icons';
+import { WifiIcon, UsersIcon, BadgeCheckIcon } from './icons';
 
 const StrengthsSection: React.FC = () => {
   const strengths = [
     {
-      icon: <ClockIcon className="w-8 h-8 text-brand-red" />,
+      icon: <WifiIcon className="w-8 h-8 text-brand-red" />,
       title: 'Always Connected, Always Ready',
       description: 'Our system operates 24/7, sending instant alerts to users and emergency services even without stable internet.'
     },
     {
-      icon: <ServerIcon className="w-8 h-8 text-brand-red" />,
+      icon: <UsersIcon className="w-8 h-8 text-brand-red" />,
       title: 'Driven by Passionate Innovators',
       description: 'Created by young South African engineers who understand the challenges of township fires and are committed to real impact.'
     },
     {
-      icon: <ShieldCheckIcon className="w-8 h-8 text-brand-red" />,
+      icon: <BadgeCheckIcon className="w-8 h-8 text-brand-red" />,
       title: 'Proven Reliability',
       description: 'Built with secure hardware and tested software to ensure dependable performance in any environment.'
     },
