@@ -1,8 +1,8 @@
-
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
+import PartnersSection from './components/PartnersSection';
 import StrengthsSection from './components/StrengthsSection';
 import CareersSection from './components/CareersSection';
 import CtaSection from './components/CtaSection';
@@ -23,6 +23,7 @@ const App: React.FC = () => {
         <div ref={nextSectionRef}>
           <AboutSection />
         </div>
+        <PartnersSection />
         <StrengthsSection />
         <CareersSection />
         <CtaSection />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DetechLogo, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon } from './icons';
+import { DetechLogo, FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon, CheckCircleIcon } from './icons';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -60,16 +60,21 @@ const Footer: React.FC = () => {
                     setError('');
                     setIsSubmitted(false);
                   }}
-                  className={`w-full px-4 py-2 text-gray-800 rounded-l-md focus:outline-none focus:ring-2 ${error ? 'ring-red-500 border-red-500' : 'focus:ring-brand-orange'}`}
+                  className={`w-full px-4 py-2 text-gray-800 rounded-l-md focus:outline-none focus:ring-2 ${isSubmitted ? 'ring-green-500' : error ? 'ring-red-500' : 'focus:ring-brand-orange'}`}
                   aria-invalid={!!error}
-                  aria-describedby="email-error"
+                  aria-describedby="email-error email-success"
                 />
                 <button type="submit" className="bg-brand-orange text-white font-bold px-4 py-2 rounded-r-md hover:bg-opacity-90 transition-colors">
                   Go
                 </button>
               </form>
               {error && <p id="email-error" className="text-red-500 text-xs mt-1">{error}</p>}
-              {isSubmitted && <p className="text-green-400 text-xs mt-1">Thank you for subscribing!</p>}
+              {isSubmitted && (
+                <div id="email-success" className="flex items-center text-green-400 text-sm mt-2">
+                  <CheckCircleIcon className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <span>Thank you for subscribing!</span>
+                </div>
+              )}
             </div>
           </div>
 

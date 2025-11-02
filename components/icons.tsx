@@ -149,3 +149,42 @@ export const PauseIcon: React.FC<IconProps> = ({ className }) => (
     <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
   </svg>
 );
+
+export const CheckCircleIcon: React.FC<IconProps> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
+
+export const TelkomLogo: React.FC<IconProps> = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 494 102"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    aria-label="Telkom Logo"
+  >
+    <path d="M0 20.3V0h47.9v20.3h-19v81.6H9.1V20.3H0zM85.5 80.8c0-10.4 1.8-18.7 5.5-24.9 3.7-6.2 8.8-9.3 15.4-9.3s11.7 3.1 15.4 9.3c3.7 6.2 5.5 14.5 5.5 24.9 0 10.4-1.8 18.7-5.5 24.9-3.7 6.2-8.8 9.3-15.4 9.3s-11.7-3.1-15.4-9.3c-3.7-6.2-5.5-14.5-5.5-24.9zm13.8 0c0 6.5.7 11.5 2.1 15.1 1.4 3.6 3.6 5.4 6.5 5.4s5.1-1.8 6.5-5.4c1.4-3.6 2.1-8.6 2.1-15.1 0-6.5-.7-11.5-2.1-15.1-1.4-3.6-3.6-5.4-6.5-5.4s5.1 1.8 6.5 5.4c1.4 3.6 2.1 8.6 2.1 15.1zM157.5 101.9V0h19.8v101.9h-19.8zm46.5-101.9V0h19.8v101.9h-19.8zm12.9 48.2l22.1-48.2h22.2l-28.2 61.1 29.8 40.8h-22.9l-19.5-28.5-7.3 28.5h-17v-101.9h19.8v48.2zM299.8 51.1c0-23.7 13.2-40.1 33.1-40.1s33.1 16.4 33.1 40.1-13.2 40.1-33.1 40.1-33.1-16.4-33.1-40.1zm19.8 0c0 14.8 7.3 25.8 13.4 25.8s13.4-11 13.4-25.8-7.3-25.8-13.4-25.8-13.4 11-13.4 25.8zM394.3 101.9V0h19.8v81.1h17.1V0h19.8v101.9H394.3z" />
+  </svg>
+);
+
+export const GeekKulchaLogo: React.FC<IconProps> = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 340 50"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    aria-label="Geekulcha Logo"
+  >
+    <text
+      x="0"
+      y="40"
+      fontFamily="'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+      fontSize="42"
+      fontWeight="700"
+      letterSpacing="-1"
+    >
+      GEEKULCHA/&gt;
+    </text>
+  </svg>
+);
