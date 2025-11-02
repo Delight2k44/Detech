@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRightIcon } from './icons';
 
 type HeroProps = {
@@ -6,13 +6,27 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div 
       className="relative h-[80vh] min-h-[600px] text-white overflow-hidden"
     >
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('https://storage.googleapis.com/aistudio-v2-dev-user-output/projects/a8169e6b-4263-4b82-97b7-6b4513758b29/requests/generation-919506691456_0.jpeg')" }}
+        style={{ 
+          backgroundImage: "url('https://storage.googleapis.com/aistudio-v2-dev-user-output/projects/a8169e6b-4263-4b82-97b7-6b4513758b29/requests/generation-919506691456_0.jpeg')",
+          transform: `translateY(${offsetY * 0.3}px) scale(1.1)` 
+        }}
         aria-hidden="true"
       ></div>
       <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-dark/80 to-brand-blue-dark/10"></div>
