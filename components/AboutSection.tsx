@@ -9,12 +9,10 @@ const AboutSection: React.FC = () => {
         {/* Image Section */}
         <div className="relative h-full min-h-[450px]">
           <div className="absolute top-0 left-0 w-[80%] h-[90%] shadow-2xl rounded-lg overflow-hidden">
-            {/* TODO: Add image of a Detech engineer */}
-            <img src="https://placehold.co/600x800/101828/FFFFFF?text=Detech+Engineer" alt="Detech Engineer at work" className="w-full h-full object-cover" />
+            <img src="https://images.pexels.com/photos/5439427/pexels-photo-5439427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech Engineer at work" className="w-full h-full object-cover" />
           </div>
           <div className="absolute bottom-0 right-0 w-[60%] h-[55%] border-8 border-white rounded-lg shadow-2xl overflow-hidden">
-             {/* TODO: Add image of a server room or tech environment */}
-             <img src="https://placehold.co/400x300/344054/FFFFFF?text=Server+Room" alt="Detech Server Room" className="w-full h-full object-cover" />
+             <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech Server Room" className="w-full h-full object-cover" />
           </div>
         </div>
 

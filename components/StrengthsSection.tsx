@@ -48,8 +48,7 @@ const StrengthsSection: React.FC = () => {
 
         {/* Image Section */}
         <div className="relative">
-          {/* TODO: Add image of the Detech team collaborating */}
-          <img src="https://placehold.co/700x550/344054/FFFFFF?text=Detech+Team" alt="Detech team collaborating" className="w-full h-auto rounded-lg shadow-2xl" />
+          <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech team collaborating" className="w-full h-auto rounded-lg shadow-2xl" />
         </div>
       </div>
     </section>

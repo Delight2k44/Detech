@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { QuoteIcon } from './icons';
 
@@ -7,8 +8,7 @@ const CareersSection: React.FC = () => {
             <div className="container mx-auto grid md:grid-cols-2">
                 {/* Image Section */}
                 <div className="relative min-h-[500px] md:min-h-0">
-                    {/* TODO: Add an image of a modern office environment */}
-                    <img src="https://placehold.co/800x600/101828/FFFFFF?text=Modern+Office" alt="Modern Detech Office" className="absolute inset-0 w-full h-full object-cover"/>
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern Detech Office" className="absolute inset-0 w-full h-full object-cover"/>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     <div className="relative h-full flex flex-col justify-end p-12 text-white">
                         <h3 className="text-3xl font-bold mb-4">Be Prepared for the Next Big Thing</h3>

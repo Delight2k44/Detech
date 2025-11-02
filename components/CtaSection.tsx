@@ -4,8 +4,7 @@ import React from 'react';
 const CtaSection: React.FC = () => {
   return (
     <section className="relative py-20 bg-brand-blue-light">
-      {/* TODO: Add an abstract technology background image */}
-      <img src="https://placehold.co/1920x400/101828/FFFFFF?text=Abstract+Tech+Background" alt="Abstract technology background" className="absolute inset-0 w-full h-full object-cover opacity-10" />
+      <img src="https://images.pexels.com/photos/5474028/pexels-photo-5474028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Abstract technology background" className="absolute inset-0 w-full h-full object-cover opacity-10" />
       <div className="relative container mx-auto px-4 text-center text-white">
         <h2 className="text-4xl font-extrabold max-w-3xl mx-auto">
           Don't Worry, Our Engineers Are Here To Architect The Future. Let's Build It Now!

@@ -12,7 +12,11 @@ const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
   ];
 
   return (
-    <div className="relative h-[80vh] min-h-[600px] text-white bg-brand-blue-dark">
+    <div 
+      className="relative h-[80vh] min-h-[600px] text-white bg-cover bg-center"
+      style={{ backgroundImage: "url('https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}
+    >
+      <div className="absolute inset-0 bg-brand-blue-dark/80"></div>
       {/* Content */}
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="max-w-2xl">
