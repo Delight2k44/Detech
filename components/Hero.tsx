@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRightIcon } from './icons';
-
+import heroImage from'../assests/images/WhatsApp Image 2025-11-06 at 14.04.48_e2bebc32.jpg';
 type HeroProps = {
   onGetStartedClick: () => void;
 };
@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('https://storage.googleapis.com/aistudio-v2-dev-user-output/projects/a8169e6b-4263-4b82-97b7-6b4513758b29/requests/generation-919506691456_0.jpeg')",
+          backgroundImage:`url('${heroImage}')`,
           transform: `translateY(${offsetY * 0.3}px) scale(1.1)` 
         }}
         aria-hidden="true"
