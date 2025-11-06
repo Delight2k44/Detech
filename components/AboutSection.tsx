@@ -1,6 +1,10 @@
 import React from 'react';
 import { CheckIcon, ShieldCheckIcon, StarIcon, ServerIcon } from './icons';
 
+// 1. IMPORT YOUR LOCAL IMAGE
+// Assuming the path is correct relative to AboutSection.tsx
+import aboutImage1 from '../assests/images/WhatsApp Image 2025-11-06 at 14.04.48_e2bebc32.jpg'; 
+
 const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-24 bg-white">
@@ -8,10 +12,16 @@ const AboutSection: React.FC = () => {
         {/* Image Section */}
         <div className="relative h-full min-h-[450px]">
           <div className="absolute top-0 left-0 w-[80%] h-[90%] shadow-2xl rounded-lg overflow-hidden">
-            <img src="https://images.pexels.com/photos/5439427/pexels-photo-5439427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech Engineer at work" className="w-full h-full object-cover" />
+            <img 
+              // 2. USE THE IMPORTED VARIABLE HERE
+              src={aboutImage1} 
+              alt="Detech Engineer at work" 
+              className="w-full h-full object-cover" 
+            />
           </div>
           <div className="absolute bottom-0 right-0 w-[60%] h-[55%] border-8 border-white rounded-lg shadow-2xl overflow-hidden">
-             <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech Server Room" className="w-full h-full object-cover" />
+            {/* Keeping the external image for the smaller picture */}
+            <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detech Server Room" className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -32,7 +42,7 @@ const AboutSection: React.FC = () => {
                 <p className="text-gray-600 text-sm mt-1">Enim ipsum sociosqu quisque sem molestie potenti.</p>
               </div>
             </div>
-             <div className="flex items-start space-x-3">
+            <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
                 <CheckIcon className="w-6 h-6 text-brand-red" />
               </div>
